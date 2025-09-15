@@ -14,7 +14,17 @@ sources:
     tables:
       - name: customers
         freshness: null
+        columns:
+          - name: id
+            data_tests:
+              - unique
+              - not_null
       - name: orders
+        columns:
+          - name: id
+            data_tests:
+              - unique
+              - not_null
 
 
     
