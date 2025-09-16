@@ -1,0 +1,28 @@
+models:
+- name: dim_customers
+  description: This model consolidates customer information with their order history,
+    providing insights into customer behavior and value. It combines customer details
+    with their first and most recent order dates, total number of orders, and lifetime
+    value, enabling analysis of customer engagement and profitability.
+  columns:
+  - name: customer_id
+    description: A unique identifier for each customer.
+    data_tests:
+      - unique
+      - not_null
+  - name: first_name
+    description: The first name of the customer.
+    data_tests:
+      - not_null
+  - name: last_name
+    description: The last name of the customer.
+    data_tests:
+      - not_null
+  - name: first_order_date
+    description: The date when the customer placed their first order.
+  - name: most_recent_order_date
+    description: The date when the customer placed their most recent order.
+  - name: number_of_orders
+    description: The total number of orders placed by the customer.
+  - name: lifetime_value
+    description: The total amount spent for all the orders placed by the customer.
